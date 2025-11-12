@@ -1,0 +1,73 @@
+@tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+
+    @layer base {
+      :root {
+        --background: 220 20% 98%; /* Light Gray #F5F7FA */
+        --foreground: 215 28% 17%; /* Charcoal #1F3730 */
+
+        --card: 0 0% 100%;
+        --card-foreground: 215 28% 17%;
+
+        --popover: 0 0% 100%;
+        --popover-foreground: 215 28% 17%;
+
+        --primary: 226 56% 31%; /* Primary Blue #243D75 */
+        --primary-foreground: 0 0% 100%;
+
+        --secondary: 198 54% 59%; /* Sky #5BAAD3 */
+        --secondary-foreground: 226 56% 31%;
+
+        --muted: 210 40% 96.1%;
+        --muted-foreground: 215.4 16.3% 46.9%;
+
+        --accent: 210 40% 96.1%;
+        --accent-foreground: 222.2 47.4% 11.2%;
+
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 100%;
+
+        --border: 220 13% 91%;
+        --input: 220 13% 91%;
+        --ring: 226 56% 31%;
+
+        --radius: 1rem; /* 16px */
+      }
+
+      .dark {
+        /* Add dark mode variables if needed later */
+      }
+    }
+
+    @layer base {
+      * {
+        @apply border-border;
+      }
+      body {
+        @apply bg-background text-brand-charcoal;
+        font-family: 'Inter', sans-serif;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        @apply font-bold;
+      }
+    }
+    
+    @layer components {
+      .brand-gradient-text {
+        @apply bg-gradient-to-r from-brand-primary-blue to-brand-sky text-transparent bg-clip-text;
+      }
+    }
+
+    @layer utilities {
+      .soft-shadow {
+        box-shadow: 0 4px 15px -1px rgb(0 0 0 / 0.06), 0 2px 8px -2px rgb(0 0 0 / 0.05);
+      }
+      .soft-shadow-hover:hover {
+        box-shadow: 0 10px 20px -2px rgb(0 0 0 / 0.07), 0 4px 10px -4px rgb(0 0 0 / 0.06);
+      }
+      .bg-dots-pattern {
+        background-image: radial-gradient(circle at 1px 1px, #d1d5db 1px, transparent 0);
+        background-size: 20px 20px;
+      }
+    }
